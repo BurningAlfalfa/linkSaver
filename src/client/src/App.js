@@ -28,7 +28,7 @@ class App extends Component {
             <form>
               <div align="center" className="container">
                  <input type="text" onChange={e => this.setState({url: e.target.value})}  placeholder="Enter link" />
-                <input type="text" onChange={e => this.setState({link: e.target.value})}  placeholder="enter email" />
+                <input type="text" onChange={e => this.setState({email: e.target.value})}  placeholder="enter email" />
                 <button onClick={this.sendData} className="saveButton" type="submit">Save</button>
               </div>
             </form>
