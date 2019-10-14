@@ -3,24 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 
-
-fetch('/gift', {
-  method: 'POST',
-            headers: {
-              'Content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                amount,
-                unit,
-                email,
-                sendEmail,
-                emailBody,
-                emailSubject,
-                gasPrice
-              })
-            })
-
 class App extends Component {
+
+  sendData = () => {
+      console.log("url: ", this.state.url, "\nemail: ", this.state.email)
+  }
+
   render() {
     return (
 
@@ -39,9 +27,9 @@ class App extends Component {
               </p>
             <form>
               <div align="center" className="container">
-                <input type="url" placeholder="Enter link" name="link" required></input>
-                <input type="email" placeholder="enter email" name="email" required></input>
-                <button className="saveButton" type="submit">Save</button>
+                 <input type="text" onChange={e => this.setState({url: e.target.value})}  placeholder="Enter link" />
+                <input type="text" onChange={e => this.setState({link: e.target.value})}  placeholder="enter email" />
+                <button onClick={this.sendData} className="saveButton" type="submit">Save</button>
               </div>
             </form>
             <p className="content">
@@ -52,7 +40,7 @@ class App extends Component {
           </div>
       
       
-          <div class="footer">
+          <div className="footer">
             <div>Adventure Corperation</div>
 
 
@@ -64,5 +52,13 @@ class App extends Component {
     );
   }
 }
-
-export default App;
+/*
+fetch('/my-endpoint-in-the-server', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(myDataToSendToServer)
+})
+*/
+export default App
