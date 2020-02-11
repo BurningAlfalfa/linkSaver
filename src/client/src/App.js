@@ -6,7 +6,20 @@ import './App.css';
 class App extends Component {
 
   sendData = () => {
-      console.log("url: ", this.state.url, "\nemail: ", this.state.email)
+    console.log("url: ", this.state.url, "\nemail: ", this.state.email) //this was for testing to see if our userinput got stored  in the function 
+
+    fetch('/save-url', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        url: this.state.url,
+        email: this.state.email
+      }
+      )
+    }) // this sends our data email and url to the server endpoint (local endpoint)
+
   }
 
   render() {
@@ -25,40 +38,32 @@ class App extends Component {
             <p className="instruct">
               Step 2: Paste link below
               </p>
-            <form>
+            <div>
               <div align="center" className="container">
-                 <input type="text" onChange={e => this.setState({url: e.target.value})}  placeholder="Enter link" />
-                <input type="text" onChange={e => this.setState({email: e.target.value})}  placeholder="enter email" />
+                <input type="text" onChange={e => this.setState({ url: e.target.value })} placeholder="Enter link" />
+                <input type="text" onChange={e => this.setState({ email: e.target.value })} placeholder="enter email" />
                 <button onClick={this.sendData} className="saveButton" type="submit">Save</button>
               </div>
-            </form>
+            </div>
             <p className="content">
               Step 3: Log into reader.linksaver.net
                 </p>
           </div>
 
-          </div>
-      
-      
-          <div className="footer">
-            <div>Adventure Corperation</div>
+        </div>
 
 
-            <div>Powered by Etherium</div>
-          </div>
-    </div>
+        <div className="footer">
+          <div>Adventure Corperation</div>
+
+
+          <div>Powered by Etherium</div>
+        </div>
+      </div>
 
 
     );
   }
 }
-/*
-fetch('/my-endpoint-in-the-server', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(myDataToSendToServer)
-})
-*/
+
 export default App
