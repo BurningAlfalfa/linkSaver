@@ -42,4 +42,4 @@ async function main() {
 
 
 }
-module.exports = { mint } 
+

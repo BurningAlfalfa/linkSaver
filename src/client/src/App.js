@@ -25,7 +25,8 @@ class App extends Component {
   render() {
     return (
 
-      <div className="app">
+      <div className="app"> 
+
         <div>
           <header className="app-header">
             {/*<img src={logo} className="logo" alt="logo"/>*/}
