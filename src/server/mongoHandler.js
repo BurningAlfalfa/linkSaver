@@ -5,7 +5,7 @@ const url = 'mongodb://localhost:27017';
 let collectionLinks 
 const collectionName = 'userLinks'
 const databaseName = 'links'
-
+/*
 function saveUserData(url,email){
   let findResult = await collectionLinks.find({email:email})
   let findResultArray = await findResult.toArray()
@@ -15,9 +15,9 @@ function saveUserData(url,email){
   }
 
 
-}
-async function insertDocument(url, email){
-  await collectionLinks.insertOne({email:email})
+}*/
+function insertDocument(url, email){
+  collectionLinks.insertOne({email:email,url:url})
 }
 function loadUserData(){
 
