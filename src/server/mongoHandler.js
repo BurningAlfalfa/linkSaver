@@ -16,8 +16,8 @@ function saveUserData(url,email){
 
 
 }
-function insertDocument(url, email){
-  collectionLinks.insertOne({email:email})
+async function insertDocument(url, email){
+  await collectionLinks.insertOne({email:email})
 }
 function loadUserData(){
 
