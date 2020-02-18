@@ -16,7 +16,8 @@ function saveUserData(url,email){
 
 
 }*/
-function insertDocument(url, email){
+ function insertDocument(url, email){
+  
   collectionLinks.insertOne({email:email,url:url})
 }
 function loadUserData(){
@@ -28,7 +29,8 @@ MongoClient.connect(url, {useUnifiedTopology: true}, onConnect)
 
 async function onConnect(err, client) {
   console.log("Connected successfully to server");
-  
+    console.log("***********************************************",err);
+
   const db = client.db(databaseName);
 
   // look at the documentation
@@ -36,8 +38,12 @@ async function onConnect(err, client) {
 
   // create Collection object
   collectionLinks = db.collection(collectionName);
-  insertDocumen('bob@gmail.com');
-  collectionLinks.find({email:"bob@gmail.com"});
+  insertDocument('bob@gmail.com');
+  console.log(collectionLinks.find({email:"bob@gmail.com"}))
+
+  let findResult = await collectionLinks.find({email:email})
+  let findResultArray = await findResult.toArray()
+  console.log(findResultArray);
   /*
   // insert document
   await collectionLinks.insertOne({"email":req.body})

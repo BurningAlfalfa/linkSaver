@@ -1,0 +1,228 @@
+
+> server@1.0.0 start /home/adam/Desktop/Link saver/src/server
+> nodemon index.js
+
+[33m[nodemon] 2.0.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching dir(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+[33mYou can improve web3's peformance when running Node.js versions older than 10.5.0 by installing the (deprecated) scrypt package in your project[0m
+[33mYou can improve web3's peformance when running Node.js versions older than 10.5.0 by installing the (deprecated) scrypt package in your project[0m
+Server listening on port 8000
+Connected successfully to server
+*********************************************** null
+Cursor {
+  _readableState: 
+   ReadableState {
+     objectMode: true,
+     highWaterMark: 16,
+     buffer: BufferList { head: null, tail: null, length: 0 },
+     length: 0,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: false,
+     endEmitted: false,
+     reading: false,
+     sync: true,
+     needReadable: false,
+     emittedReadable: false,
+     readableListening: false,
+     resumeScheduled: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  operation: 
+   FindOperation {
+     options: 
+      { skip: 0,
+        limit: 0,
+        raw: undefined,
+        hint: null,
+        timeout: undefined,
+        slaveOk: true,
+        readPreference: [Object],
+        db: [Object],
+        promiseLibrary: [Function: Promise] },
+     ns: MongoDBNamespace { db: 'links', collection: 'userLinks' },
+     cmd: 
+      { find: 'links.userLinks',
+        limit: 0,
+        skip: 0,
+        query: [Object],
+        raw: undefined,
+        hint: null,
+        timeout: undefined,
+        slaveOk: true,
+        readPreference: [Object] },
+     readPreference: ReadPreference { mode: 'primary', tags: undefined },
+     cursorState: 
+      { cursorId: null,
+        cmd: [Object],
+        documents: [],
+        cursorIndex: 0,
+        dead: false,
+        killed: false,
+        init: false,
+        notified: false,
+        limit: 0,
+        skip: 0,
+        batchSize: 1000,
+        currentLimit: 0,
+        transforms: undefined,
+        raw: undefined } },
+  pool: null,
+  server: null,
+  disconnectHandler: undefined,
+  bson: BSON {},
+  ns: 'links.userLinks',
+  namespace: MongoDBNamespace { db: 'links', collection: 'userLinks' },
+  cmd: 
+   { find: 'links.userLinks',
+     limit: 0,
+     skip: 0,
+     query: { email: 'bob@gmail.com' },
+     raw: undefined,
+     hint: null,
+     timeout: undefined,
+     slaveOk: true,
+     readPreference: ReadPreference { mode: 'primary', tags: undefined } },
+  options: 
+   { skip: 0,
+     limit: 0,
+     raw: undefined,
+     hint: null,
+     timeout: undefined,
+     slaveOk: true,
+     readPreference: ReadPreference { mode: 'primary', tags: undefined },
+     db: 
+      Db {
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        s: [Object],
+        serverConfig: [Getter],
+        bufferMaxEntries: [Getter],
+        databaseName: [Getter] },
+     promiseLibrary: [Function: Promise] },
+  topology: 
+   NativeTopology {
+     domain: null,
+     _events: 
+      { authenticated: [Function],
+        error: [Array],
+        timeout: [Array],
+        close: [Array],
+        parseError: [Array],
+        fullsetup: [Array],
+        all: [Array],
+        reconnect: [Array],
+        serverOpening: [Function],
+        serverDescriptionChanged: [Function],
+        serverHeartbeatStarted: [Function],
+        serverHeartbeatSucceeded: [Function],
+        serverHeartbeatFailed: [Function],
+        serverClosed: [Function],
+        topologyOpening: [Function],
+        topologyClosed: [Function],
+        topologyDescriptionChanged: [Function],
+        commandStarted: [Function],
+        commandSucceeded: [Function],
+        commandFailed: [Function],
+        joined: [Function],
+        left: [Function],
+        ping: [Function],
+        ha: [Function],
+        open: [Object] },
+     _eventsCount: 25,
+     _maxListeners: Infinity,
+     s: 
+      { id: 0,
+        options: [Object],
+        seedlist: [Array],
+        state: 'connected',
+        description: [Object],
+        serverSelectionTimeoutMS: 30000,
+        heartbeatFrequencyMS: 10000,
+        minHeartbeatFrequencyMS: 500,
+        Cursor: [Function: Cursor],
+        bson: BSON {},
+        servers: [Object],
+        sessionPool: [Object],
+        sessions: [Object],
+        promiseLibrary: [Function: Promise],
+        credentials: undefined,
+        clusterTime: null,
+        iterationTimers: Set {},
+        connectionTimers: Set {},
+        clientInfo: [Object],
+        sCapabilities: [Object] } },
+  cursorState: 
+   { cursorId: null,
+     cmd: 
+      { find: 'links.userLinks',
+        limit: 0,
+        skip: 0,
+        query: [Object],
+        raw: undefined,
+        hint: null,
+        timeout: undefined,
+        slaveOk: true,
+        readPreference: [Object] },
+     documents: [],
+     cursorIndex: 0,
+     dead: false,
+     killed: false,
+     init: false,
+     notified: false,
+     limit: 0,
+     skip: 0,
+     batchSize: 1000,
+     currentLimit: 0,
+     transforms: undefined,
+     raw: undefined },
+  logger: Logger { className: 'Cursor' },
+  s: 
+   { numberOfRetries: 5,
+     tailableRetryInterval: 500,
+     currentNumberOfRetries: 5,
+     state: 0,
+     promiseLibrary: [Function: Promise],
+     currentDoc: null,
+     explicitlyIgnoreSession: false } }
+(node:7642) UnhandledPromiseRejectionWarning: ReferenceError: email is not defined
+    at onConnect (/home/adam/Desktop/Link saver/src/server/mongoHandler.js:44:54)
+    at result (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/operations/execute_operation.js:75:17)
+    at executeCallback (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/operations/execute_operation.js:68:9)
+    at err (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/operations/connect.js:204:7)
+    at connectCallback (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/operations/connect.js:369:5)
+    at topology.connect.err (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/operations/connect.js:514:7)
+    at connectHandler (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/topology.js:315:45)
+    at selectServer (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/topology.js:325:7)
+    at selectServers (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/topology.js:452:9)
+    at selectServers (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/server_selection.js:297:12)
+    at NativeTopology.descriptionChangedHandler (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/server_selection.js:321:7)
+    at Object.onceWrapper (events.js:315:30)
+    at emitOne (events.js:121:20)
+    at NativeTopology.emit (events.js:211:7)
+    at NativeTopology.serverUpdateHandler (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/topology.js:564:10)
+    at emitOne (events.js:116:13)
+    at Server.emit (events.js:211:7)
+    at /home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/sdam/server.js:541:12
+    at createConnection (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/connection/pool.js:594:7)
+    at connect (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/connection/pool.js:1048:7)
+    at callback (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/connection/connect.js:93:5)
+    at runCommand (/home/adam/Desktop/Link saver/src/server/node_modules/mongodb/lib/core/connection/connect.js:156:5)
+(node:7642) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:7642) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
