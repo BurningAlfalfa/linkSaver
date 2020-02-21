@@ -18,7 +18,7 @@ function saveUserData(url,email){
 }*/
  function insertDocument(url, email){
   
-  collectionLinks.insertOne({email:email,url:url})
+  collectionLinks.insertOne({email:email,urls:[url]})
 }
 function loadUserData(){
 
@@ -38,10 +38,9 @@ async function onConnect(err, client) {
 
   // create Collection object
   collectionLinks = db.collection(collectionName);
-  insertDocument('bob@gmail.com');
-  console.log(collectionLinks.find({email:"bob@gmail.com"}))
+  insertDocument('bob@gmail.com',"www.google.com");
 
-  let findResult = await collectionLinks.find({email:email})
+  let findResult = await collectionLinks.find({email:"bob@gmail.com",url: "www.google.com"})
   let findResultArray = await findResult.toArray()
   console.log(findResultArray);
   /*
