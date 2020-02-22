@@ -40,7 +40,7 @@ async function onConnect(err, client) {
   collectionLinks = db.collection(collectionName);
   insertDocument('bob@gmail.com',"www.google.com");
 
-  let findResult = await collectionLinks.find({email:"bob@gmail.com",url: "www.google.com"})
+  let findResult = await collectionLinks.find({email:"bob@gmail.com",urls: ["www.google.com"]})
   let findResultArray = await findResult.toArray()
   console.log(findResultArray);
   /*
